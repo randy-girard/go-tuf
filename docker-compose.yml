@@ -4,6 +4,11 @@ services:
   tuf-repo:
     build: .
     container_name: tuf-repo
+    environment:
+      TUF_ROOT_PASSPHRASE: "{{ TUF_ROOT_PASSPHRASE }}"
+      TUF_TARGETS_PASSPHRASE: "{{ TUF_TARGETS_PASSPHRASE }}"
+      TUF_SNAPSHOT_PASSPHRASE: "{{ TUF_SNAPSHOT_PASSPHRASE }}"
+      TUF_TIMESTAMP_PASSPHRASE: "{{ TUF_TIMESTAMP_PASSPHRASE }}"
     volumes:
       - ./repo:/repo
       - ./:/app
