@@ -4,12 +4,6 @@ set -e
 REPO_DIR="/repo"
 TARGETS_DIR="$REPO_DIR/targets"
 
-export TUF_ROOT_PASSPHRASE="password"
-export TUF_TARGETS_PASSPHRASE="password"
-export TUF_SNAPSHOT_PASSPHRASE="password"
-export TUF_TIMESTAMP_PASSPHRASE="password"
-# TUF_PASSPHRASE="password"
-
 # Create targets directory and sample file
 mkdir -p "$TARGETS_DIR"
 
